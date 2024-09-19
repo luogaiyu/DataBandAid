@@ -5,8 +5,15 @@
   "description": "__MSG_appDescription__",
   "default_locale": "zh_CN",
   "permissions": [
-    "storage"
+"declarativeNetRequest", 
+"declarativeNetRequestWithHostAccess",
+ "declarativeNetRequestFeedback",
+ "webRequest",
+ "webRequestAuthProvider",
+ "scripting"
+ ,"webNavigation"
   ],
+  "host_permissions": ["*://*/*"],
   "background": {
     "service_worker": "js/background.js"
   },
@@ -22,5 +29,14 @@
       "js": ["js/content.js"],
       "run_at": "document_start"
     }
-  ]
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "minimal_ruleset",
+        "enabled": true,
+        "path": "etc/minimal_rules.json"
+      }
+    ]
+  }
 }
