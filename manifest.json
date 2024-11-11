@@ -10,8 +10,8 @@
  "declarativeNetRequestFeedback",
  "webRequest",
  "webRequestAuthProvider",
- "scripting"
- ,"webNavigation"
+ "webNavigation",
+ "cookies"
   ],
   "host_permissions": ["*://*/*"],
   "background": {
